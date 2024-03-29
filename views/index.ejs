@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>WeatherApp</title>
+        <link href="style.css" rel="stylesheet"/>
+    </head>
+    <body>
+         <header><img src="/assets/logo2.jpeg"/> <h1> Weather App </h1></header>
+        <section id="main">
+            <div class="container">
+                  <span id="content"> Lets find out the weather of your location</span>
+                  <form class="search" action="/city" method="POST">
+                  <input type="text" placeholder="City name ..." name="city">
+                  <button type="submit" id="search-button">Search</button>
+                  </form>
+            </div>
+        </section>
+
+
+
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+    </body>
+</html>

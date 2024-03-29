@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>WeatherApp</title>
+        <link href="style-city.css" rel="stylesheet"/>
+    </head>
+    <body>
+         <header><img src="/assets/logo2.jpeg"/> <h1> Weather App </h1></header>
+        <section id="main">
+            <div class="container">
+                  <span id="top"> <p><%= weather.location.name.toUpperCase() %> , <%=weather.location.region %>, <%=weather.location.country%></p></span>
+                     <span id="temperature"><%= weather.current.temp_c %> <span id="symbol">°C</span> </span> 
+                    <div class="horizontal">
+                        <div id="icon"> <p><%= weather.current.condition.text %> </p>
+                            <img src="<%= weather.current.condition.icon %>" alt="weather icon"/>
+                         </div>
+                        <div id="humidity">
+                            <p> Humidity </p>
+                            <span><%= weather.current.humidity %> %</span>
+                        </div>
+                    </div> 
+                    
+                    <div class="horizontal2">
+                        <div><p class="heading">Cloud</p>
+                            <p class="number"><%= weather.current.cloud %> </p></div>
+                        <div>
+                            <p class="feels">Feels like </p>
+                            <p class="number"><%= weather.current.feelslike_c %> °C </p>
+                        </div>
+                    </div>
+                 
+            </div>
+        </section>
+
+
+
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+    </body>
+</html>
